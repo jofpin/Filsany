@@ -1,4 +1,4 @@
 Filsany
 =======
 
-Sanitize filter Prevention. Cross-site Scriping (XSS)
+Sanitize Filter Prevention. Cross-site Scriping  (XSS)
