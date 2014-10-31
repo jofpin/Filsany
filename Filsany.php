@@ -15,6 +15,7 @@ function Filsany($aXSS) {
     $aXSS = str_replace(">", "&#62;", $aXSS);
     $aXSS = str_replace("<", "&#60;", $aXSS);
     $aXSS = str_replace("'", "&#39;", $aXSS);
+    $aXSS = str_replace("\"", "&quot;", $aXSS);
     $aXSS = str_replace("-", "&#45;", $aXSS);
     $aXSS = str_replace("_", "&#95;", $aXSS);
     $aXSS = str_replace("=", "&#61;", $aXSS);
