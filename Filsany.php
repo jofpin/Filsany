@@ -25,14 +25,14 @@ function Filsany($aXSS) {
 }
 
 function FilsanyClean($aXSS) {
-	$aXSS = str_replace('document.cookie', '[cleanxss]', $aXSS);
-	$aXSS = str_replace('document.domain', '[cleanxss]', $aXSS);
-	$aXSS = str_replace('document.write', '[cleanxss]', $aXSS);
-	$aXSS = str_replace('.parentNode', '[cleanxss]', $aXSS);
-	$aXSS = str_replace('.innerHTML', '[cleanxss]', $aXSS);
-	$aXSS = str_replace('<![CDATA[', '&lt;![CDATA[', $aXSS);
-	$aXSS = str_replace('<comment>', '&lt;comment&gt;', $aXSS);
-	$aXSS = str_replace('<script>', '&#60;script&#62;', $aXSS);
+	$aXSS = str_replace('document.cookie', '[cleanxss]', strtolower($aXSS));
+	$aXSS = str_replace('document.domain', '[cleanxss]', strtolower($aXSS));
+	$aXSS = str_replace('document.write', '[cleanxss]', strtolower($aXSS));
+	$aXSS = str_replace('.parentNode', '[cleanxss]', strtolower($aXSS));
+	$aXSS = str_replace('.innerHTML', '[cleanxss]', strtolower($aXSS));
+	$aXSS = str_replace('<![CDATA[', '&lt;![CDATA[', strtolower($aXSS));
+	$aXSS = str_replace('<comment>', '&lt;comment&gt;', strtolower($aXSS));
+	$aXSS = str_replace('<script>', '&#60;script&#62;', strtolower($aXSS));
 	$aXSS = str_replace('<!--', '&lt;!--', $aXSS);
 	$aXSS = str_replace('-->', '--&gt;', $aXSS);
 	return $aXSS;
